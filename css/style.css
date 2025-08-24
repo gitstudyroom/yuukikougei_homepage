@@ -136,6 +136,11 @@ h2 {
     color: #8B4513;
 }
 
+h3 {
+    text-align: center;
+    color: white;
+}
+
 /* Business Section */
 .business-content {
     display: flex;
