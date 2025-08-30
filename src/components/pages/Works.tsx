@@ -1,6 +1,5 @@
 import React from 'react';
 
-// 画像ファイルの型エラーを回避するために、画像のインポートをrequireに変更
 const IMG_7702 = require('../../../images/IMG_7702.JPG');
 const IMG_7703 = require('../../../images/IMG_7703.JPG');
 const IMG_7704 = require('../../../images/IMG_7704.JPG');

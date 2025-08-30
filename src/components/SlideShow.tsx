@@ -22,7 +22,7 @@ const SlideShow: React.FC = () => {
             setCurrentImageIndex((prevIndex: number) => (prevIndex + 1) % images.length);
         }, 5000);
 
-        return () => clearInterval(interval); // Cleanup on component unmount
+        return () => clearInterval(interval);
     }, []);
 
     return (

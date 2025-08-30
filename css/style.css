@@ -27,7 +27,7 @@ main {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    text-align: justify;
 }
 
 section {
@@ -39,7 +39,7 @@ section {
 header {
     background-color: rgba(44, 28, 1, 0.8);
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -47,6 +47,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
 header .logo {
@@ -57,6 +58,13 @@ header .logo {
 header .logo a {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 50px;
+    margin-right: 10px;
 }
 
 header nav ul {
@@ -104,7 +112,7 @@ header nav a {
     opacity: 1;
 }
 
-.slideshow-section::after { /* Dark overlay for text readability */
+.slideshow-section::after {
     content: '';
     position: absolute;
     top: 0;
@@ -131,7 +139,6 @@ header nav a {
     margin-top: 40px;
 }
 
-/* Sections */
 h2 {
     text-align: center;
     margin-bottom: 40px;
@@ -141,15 +148,13 @@ h2 {
 
 h3 {
     text-align: center;
-    color: #333; /* Default H3 color, changed from white */
+    color: #333;
 }
 
-/* Slideshow specific H3 color */
 .slideshow-text h3 {
     color: white;
 }
 
-/* Business Section */
 .business-content {
     display: flex;
     gap: 40px;
@@ -159,7 +164,6 @@ h3 {
     flex: 1;
 }
 
-/* Works Section */
 .works-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -174,7 +178,6 @@ h3 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Recruit Section */
 .recruit-details {
     background-color: #fff8e1;
     border-left: 5px solid #FFA500;
@@ -202,7 +205,6 @@ h3 {
     background-color: #e69500;
 }
 
-/* Company Section */
 .company-info dl {
     display: grid;
     grid-template-columns: 120px 1fr;
@@ -214,7 +216,6 @@ h3 {
     color: #8B4513;
 }
 
-/* Footer */
 footer {
     background-color: #e0d8cb;
     color: #333;
@@ -222,7 +223,6 @@ footer {
     padding: 20px 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -235,4 +235,18 @@ footer {
     .business-content {
         flex-direction: column;
     }
+}
+
+.fade-in-text {
+  animation: fadeIn 2s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

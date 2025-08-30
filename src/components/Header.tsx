@@ -1,11 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link
+import { Link } from 'react-router-dom';
+import logo from '../../images/LOGO.JPG';
 
 const Header: React.FC = () => {
   return (
     <header>
       <div className="container">
-        <h1 className="logo"><Link to="/">ゆうき工芸</Link></h1> {/* Use Link */}
+        <h1 className="logo">
+          <Link to="/">
+            <img src={logo} alt="ゆうき工芸ロゴ" className="header-logo" />
+            ゆうき工芸
+          </Link>
+        </h1> {/* Use Link */}
         <nav>
           <ul>
             <li><Link to="/">ホーム</Link></li> {/* Use Link */}

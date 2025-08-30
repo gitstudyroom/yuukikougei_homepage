@@ -7,8 +7,7 @@ const Home: React.FC = () => {
       <section id="home" className="slideshow-section">
         <SlideShow />
         <div className="slideshow-text">
-          <h2 className="slideshow-title">経験者大歓迎！未経験者も活躍できる、やりがいのある仕事です。</h2>
-          <h3>長崎で、船を、暮らしを、つくる仕事。</h3>
+          <h2 className="slideshow-title fade-in-text">船の中に「特別な居心地」を。</h2>
         </div>
       </section>
 

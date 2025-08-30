@@ -41,7 +41,7 @@ const Recruit: React.FC = () => {
 
         <div className="recruit-links">
           <a href="#" className="btn">ハローワークの求人を見る</a>
-          <a href="#" className="btn">Instagramで職場の雰囲気を見る</a>
+          <a href="https://www.instagram.com/yuukikougei_?igsh=c2xmNjJrajN2ZnA1" className="btn" target="_blank">Instagramで職場の雰囲気を見る</a>
         </div>
       </section>
     </main>
