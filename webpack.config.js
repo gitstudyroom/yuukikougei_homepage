@@ -45,6 +45,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html', // Use your existing index.html as a template
     }),
+    new HtmlWebpackPlugin({
+      template: './404.html',
+      filename: '404.html',
+      inject: false
+    }),
   ],
   devServer: {
     static: {
