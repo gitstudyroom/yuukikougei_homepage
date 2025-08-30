@@ -1,6 +1,23 @@
 import React from 'react';
+import { INSTAGRAM_URL, HELLOWORK_SENPAKU_DAIKU_URL, HELLOWORK_KAGU_SHOKUNIN_URL } from '../../constants/links';
 
 const Recruit: React.FC = () => {
+
+  React.useEffect(() => {
+    const daikuLink = document.getElementById('daiku-link') as HTMLAnchorElement | null;
+    if (daikuLink) {
+      daikuLink.href = HELLOWORK_SENPAKU_DAIKU_URL;
+    }
+    const shokuninLink = document.getElementById('shokunin-link') as HTMLAnchorElement | null;
+    if (shokuninLink) {
+      shokuninLink.href = HELLOWORK_KAGU_SHOKUNIN_URL;
+    }
+    const instagramLink = document.getElementById('instagram-link') as HTMLAnchorElement | null;
+    if (instagramLink) {
+      instagramLink.href = INSTAGRAM_URL;
+    }
+  }, []);
+
   return (
     <main>
       <section id="recruit" className="container page-section">
@@ -40,8 +57,9 @@ const Recruit: React.FC = () => {
         </div>
 
         <div className="recruit-links">
-          <a href="#" className="btn">ハローワークの求人を見る</a>
-          <a href="https://www.instagram.com/yuukikougei_?igsh=c2xmNjJrajN2ZnA1" className="btn" target="_blank">Instagramで職場の雰囲気を見る</a>
+          <a id="daiku-link" href="#" className="btn" target="_blank">船舶現場大工へ応募</a>
+          <a id="shokunin-link" href="#" className="btn" target="_blank">家具職人へ応募</a>
+          <a id="instagram-link" href="#" className="btn" target="_blank">Instagramで職場の雰囲気を見る</a>
         </div>
       </section>
     </main>
