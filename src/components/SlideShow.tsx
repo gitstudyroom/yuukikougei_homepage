@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const IMG_7702 = require('../../images/IMG_7702.JPG');
-const IMG_7703 = require('../../images/IMG_7703.JPG');
-const IMG_7704 = require('../../images/IMG_7704.JPG');
-const IMG_7705 = require('../../images/IMG_7705.JPG');
-const IMG_7706 = require('../../images/IMG_7706.JPG');
-
-const images: string[] = [
-    IMG_7702,
-    IMG_7703,
-    IMG_7704,
-    IMG_7705,
-    IMG_7706
-];
+const importAll = (r: __WebpackModuleApi.RequireContext): string[] => r.keys().map(r) as string[];
+const images: string[] = importAll(require.context('../../images/', false, /PRJ_\d{3}\.JPG$/));
 
 const SlideShow: React.FC = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
